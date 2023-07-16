@@ -7,7 +7,7 @@
 
     app.use(cors());
     app.use(bodyParser.json({ extended: true }));
-    app.listen(port, () => console.log("Backend server live on " + port));
+    app.listen(port, () => console.log("Backend server live on " + 8080));
 
     app.get("/", (req, res) => {
         res.send({ message: "Connected to Backend server!" });
