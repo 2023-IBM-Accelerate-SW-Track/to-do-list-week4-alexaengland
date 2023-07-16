@@ -1,13 +1,13 @@
     const express = require("express"),
             app = express(),
-            port = process.env.PORT || 8080,
+            port = process.env.PORT || 3001,
             cors = require("cors");
     const bodyParser = require('body-parser');
     const fs = require("fs").promises;
 
     app.use(cors());
     app.use(bodyParser.json({ extended: true }));
-    app.listen(port, () => console.log("Backend server live on " + 8080));
+    app.listen(port, () => console.log("Backend server live on " + port));
 
     app.get("/", (req, res) => {
         res.send({ message: "Connected to Backend server!" });
